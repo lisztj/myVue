@@ -1,0 +1,66 @@
+<div id="FinancingProjectManage">
+<a-form  class='ant-advanced-search-form' onSubmit="handleSearch()">
+  <a-row :gutter="24">
+<a-col :span="6">
+      <a-form-item label="金融机构" fieldDecoratorId="username" :fieldDecoratorOptions="{rules:
+      [{ required: true, message: 'Please input your name' }]}">
+        <a-input placeholder='请输入金融机构' />
+      </a-form-item>
+</a-col>
+    <a-col :span="6">
+      <a-form-item label="融资主体">
+        <a-select defaultValue="全部" @change="">
+          <a-select-option value="全部">全部</a-select-option>
+          <a-select-option value="镇江瀚瑞">镇江瀚瑞</a-select-option>
+          <a-select-option value="镇江瀚瑞集团">镇江瀚瑞集团</a-select-option>
+        </a-select>
+      </a-form-item>
+    </a-col>
+    <a-col :span="6">
+      <a-form-item label="金融机构">
+        <a-input placeholder='请输入金融机构' />
+      </a-form-item>
+    </a-col>
+    <a-col :span="6">
+      <a-form-item label="金融机构">
+        <a-input placeholder='请输入金融机构' />
+      </a-form-item>
+    </a-col>
+  </a-row>
+  <a-row>
+    <a-col :span="24" :style="{ margin:'0px 0px 16px 0px', textAlign: 'right' }">
+      <a-button type='primary' icon="search" :loading="loading" htmlType='submit'>查询</a-button>
+      <a-button icon="close-circle-o" :style="{ marginLeft: '8px' }" @click="handleReset()">
+        重置
+      </a-button>
+      <a :style="{ marginLeft: '8px', fontSize: '12px' }" @click="toggle()">
+        {{ Collapsed }}  <a-icon v-if="expand" type="up"/> <a-icon v-if="!expand" type="down" />
+
+      </a>
+    </a-col>
+  </a-row>
+
+<a-button icon="plus-circle-o" class="editable-add-btn" @click="handleAdd()">新增项目</a-button>
+<a-button icon="delete" class="editable-add-btn" @click="handleDelete()">删除项目</a-button>
+
+<div class="pull-right">
+<label>金额单位：</label>
+<a-select labelInValue :defaultValue="{ key: 'yiyuan' }" style="width: 120px" @change="handleChange()">
+  <a-select-option value="yiyuan">亿元</a-select-option>
+  <a-select-option value="wanyuan">万元</a-select-option>
+</a-select>
+</div>
+
+<a-table :scroll="{ x: 1500, y: 500 }" :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}" :columns="columns" :loading="loading" :dataSource="tableData" bordered>
+
+<template slot="operation" class="column-last" slot-scope="text, record">
+
+  <a href="#">查看</a>
+  <a href="#">编辑</a>
+  <a-popconfirm title='确定删除吗?' @confirm="() => cDelete(record.key)">
+    <a href="#">删除</a>
+  </a-popconfirm>
+</template>
+</a-table>
+</a-form>
+</div>

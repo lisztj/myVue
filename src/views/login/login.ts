@@ -26,50 +26,51 @@ export default class login extends Vue {
   /**是否显示更新说明 */
   isShow: any;
   mounted(){
-    
+
     this.versionCsp = "V18-0312";
     // this.wilddogUrl = dataService().wilddogUrl;
     this.authError="";
 
-  
+
 }
 login(){
     if($('#login_loginBtn').hasClass('disabled')){
         return;
     }
-    var loginData;
-    api_login.User.login(this.user).then(res=>{
-        console.log('res',res);
-        // if(!(res&&res.jwtToken)){
-        //     bootbox.alert('请输入正确的用户名和密码');
-        //     return;
-        // }
+    this.$router.push('/app/home');
+    // var loginData;
+    // api_login.User.login(this.user).then(res=>{
+    //     console.log('res',res);
+    //     // if(!(res&&res.jwtToken)){
+    //     //     bootbox.alert('请输入正确的用户名和密码');
+    //     //     return;
+    //     // }
 
-        if(res.jwtToken){
-            window.sessionStorage.setItem("token",res.jwtToken);
-        }
-        loginData=res;
-        window.sessionStorage.setItem("logined","yes");
-        var userInfo=JSON.stringify(loginData);
-        window.sessionStorage.setItem("userInfo",userInfo);
-        window.sessionStorage.setItem("isContract",loginData.isContract);
-        window.sessionStorage.setItem("userName",loginData.userName);
+    //     if(res.jwtToken){
+    //         window.sessionStorage.setItem("token",res.jwtToken);
+    //     }
+    //     loginData=res;
+    //     window.sessionStorage.setItem("logined","yes");
+    //     var userInfo=JSON.stringify(loginData);
+    //     window.sessionStorage.setItem("userInfo",userInfo);
+    //     window.sessionStorage.setItem("isContract",loginData.isContract);
+    //     window.sessionStorage.setItem("userName",loginData.userName);
 
-            if(loginData.isContract){
-               this.$router.push('/app/home');
-            }else{
-                $('#myModal').modal({
-                    keyboard: false,
-                    backdrop:"static"
-                });
-            }
-          
-        // });
-    },function(err){
-        console.log(err)
-    })
-  
-    
+    //         if(loginData.isContract){
+    //            this.$router.push('/app/home');
+    //         }else{
+    //             $('#myModal').modal({
+    //                 keyboard: false,
+    //                 backdrop:"static"
+    //             });
+    //         }
+
+    //     // });
+    // },function(err){
+    //     console.log(err)
+    // })
+
+
 };
 
 
@@ -79,26 +80,26 @@ getInquiryList(){
 package:string = 'vue-typescript';
 repo:string = 'https://github.com/itsFrank/vue-typescript';
 /* 协议 同意 */
-agree(){
-    /* api */
-    api_login.User.contract().then((res)=>{
-        console.log('res2',res)
-    if(res.success){
-        $('#myModal').modal('hide');
-        window.sessionStorage.setItem("isContract",'true');
-        this.$router.push('/app/home');
-    }
-    })
-}
+// agree(){
+//     /* api */
+//     api_login.User.contract().then((res)=>{
+//         console.log('res2',res)
+//     if(res.success){
+//         $('#myModal').modal('hide');
+//         window.sessionStorage.setItem("isContract",'true');
+//         this.$router.push('/app/home');
+//     }
+//     })
+// }
 
     /* 协议 不同意 */
-    disagree(){
-        $('#myModal').modal('hide');
-        window.sessionStorage.removeItem("logined");
-        window.sessionStorage.removeItem("userInfo");
-        window.sessionStorage.removeItem("isContract");
-        window.sessionStorage.removeItem("userName");
-        this.$router.push('/login');
-    }
+    // disagree(){
+    //     $('#myModal').modal('hide');
+    //     window.sessionStorage.removeItem("logined");
+    //     window.sessionStorage.removeItem("userInfo");
+    //     window.sessionStorage.removeItem("isContract");
+    //     window.sessionStorage.removeItem("userName");
+    //     this.$router.push('/login');
+    // }
 }
 

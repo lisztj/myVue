@@ -1,0 +1,26 @@
+.ant-form{
+  padding: 16px!important;
+  margin: 0px 0px 16px 0px!important;
+}
+.ant-advanced-search-form {
+  padding: 24px;
+  background: #ffffff;
+  /* border: 1px solid #e8e8e8; */
+  border-radius: 2px;
+}
+
+.ant-advanced-search-form .ant-form-item {
+  display: flex;
+}
+
+.ant-advanced-search-form .ant-form-item-control-wrapper {
+  flex: 1;
+}
+
+.editable-add-btn{
+  margin: 0px 5px 10px 0px;
+}
+.column-last{
+  width: 130px;
+  display: inline-block;
+}

@@ -6,16 +6,22 @@ declare var $:any;
     template: require('./nav.html'),
   })
 export default class nav extends Vue {
-  
+  app = {
+    name: "投融资管理平台"
+  };
+  collapsed: false;
    mounted(){
-    $('.auto').click(function(e){
-      $(this).parent().toggleClass('active');
-      $(this).parent().siblings(".active").removeClass('active');
-      $(this).siblings('.nav-sub').children('li').eq(0).addClass('active');
-      $(this).parent().siblings().children('.nav-sub').children('li').removeClass('active');
-    })
+    // $('.auto').click(function(e){
+    //   $(this).parent().toggleClass('active');
+    //   $(this).parent().siblings(".active").removeClass('active');
+    //   $(this).siblings('.nav-sub').children('li').eq(0).addClass('active');
+    //   $(this).parent().siblings().children('.nav-sub').children('li').removeClass('active');
+    // })
+
    }
-   clearStorage(){
-    window.localStorage.clear();
-  }
+
+
+  //  clearStorage(){
+  //   window.localStorage.clear();
+  // }
 }

@@ -1,5 +1,7 @@
 // import  Component  from 'vue-class-component'
 // import Vue from 'vue'
+import zh_CN from 'vue-antd-ui/lib/locale-provider/zh_CN';///设置组件中文
+import 'moment/locale/zh-cn';///设置组件中文
 import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
 import navbar from '../nav'
 import header from '../header'
@@ -29,8 +31,15 @@ import './App.css'
 })
 
 export default class app extends Vue {
-  title:string="Vue2.5 demo";
+  title:string="Vue2.5";
   footerTitle:string="Copyright 2018";
+
+  /**返回数据 */
+  data() {
+    return {
+      zh_CN
+    }
+  }
 
 }
 

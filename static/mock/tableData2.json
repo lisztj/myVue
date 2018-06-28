@@ -1,0 +1,36 @@
+[{
+  "itemName": "中信银行中流贷1", "financeOrgan": "中信银行镇江分行", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost":"10.12%", "operator": "苏某某", "aider":"刘某某"
+}, {
+    "itemName": "中信银行中流贷2", "financeOrgan": "中信银行镇江分行2", "money": "5", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷3", "financeOrgan": "中信银行镇江分行", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "5", "compositeCost": "8.2%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷4", "financeOrgan": "中信银行镇江分行4", "money": "2", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "1", "compositeCost": "9.1%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行5", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "4", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷6", "financeOrgan": "中信银行镇江分行", "money": "4", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行7", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷8", "financeOrgan": "中信银行镇江分行", "money": "5", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "2", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行9", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷10", "financeOrgan": "中信银行镇江分行", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行11", "money": "6", "main": "镇江瀚瑞集团", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行12", "money": "6", "main": "镇江瀚瑞集团d", "type": "中票", "timeLimit": "3", "compositeCost": "11.5%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行", "money": "6", "main": "镇江瀚瑞集团c", "type": "中票", "timeLimit": "3", "compositeCost": "7.4%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行", "money": "6", "main": "镇江瀚瑞集团1", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行", "money": "3", "main": "镇江瀚瑞集团3", "type": "中票", "timeLimit": "2", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+}, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行", "money": "6", "main": "镇江瀚瑞集团2", "type": "中票", "timeLimit": "3", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }, {
+    "itemName": "中信银行中流贷", "financeOrgan": "中信银行镇江分行", "money": "2", "main": "镇江瀚瑞集团a", "type": "中票", "timeLimit": "1", "compositeCost": "10.12%","operator": "苏某某", "aider": "刘某某"
+  }
+]

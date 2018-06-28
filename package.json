@@ -1,8 +1,8 @@
 {
-  "name": "sino.csp.vue2.5",
-  "version": "1.0.0",
+  "name": "XinChuang.vue",
+  "version": "2.5.0",
   "description": "A Vue.js project",
-  "author": "dingxiaolin",
+  "author": "ZhaoJian",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -12,6 +12,12 @@
   },
   "dependencies": {
     "axios": "~0.17.1",
+    "bootstrap": "^3.3.7",
+    "css-loader": "^0.28.11",
+    "iview": "^2.14.3",
+    "style-loader": "^0.21.0",
+    "url": "^0.11.0",
+    "url-loader": "^0.5.9",
     "vue": "^2.5.13",
     "vue-class-component": "^6.2.0",
     "vue-i18n": "^7.6.0",
@@ -24,6 +30,7 @@
     "@types/axios": "^0.14.0",
     "@types/node": "~9.4.0",
     "@types/webpack-env": "~1.13.5",
+    "ali-oss": "4.11.4",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -39,6 +46,7 @@
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
+    "echarts": "3.8.5",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "font-awesome": "^4.7.0",
@@ -65,6 +73,9 @@
     "typescript": "^2.7.2",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vee-validate": "^2.0.9",
+    "vue-antd-ui": "^0.6.1",
+    "vue-easytable": "^1.7.1",
     "vue-loader": "^13.3.0",
     "vue-resource": "^1.5.0",
     "vue-style-loader": "^3.0.1",
@@ -72,10 +83,7 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-merge": "^4.1.0",
-    "echarts": "3.8.5",
-    "ali-oss": "4.11.4",
-    "vee-validate": "^2.0.9"
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": ">= 6.0.0",

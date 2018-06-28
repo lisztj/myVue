@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   // 定义状态
   state: {
-    author: 'Dingxiaolin',
+    author: 'ZhaoJian',
     token:'',
     isLogin:''
   },
@@ -15,7 +15,7 @@ const store = new Vuex.Store({
       state.token;
     }
 },
-actions: {     
+actions: {
 },
 
 })

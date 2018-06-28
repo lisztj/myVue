@@ -3,14 +3,15 @@ import './header.css'
 declare var $:any;
 @Component({
     name:'app-header',
-     template: require('./header.html'),
-    //  props:['title'],
+    template: require('./header.html'),
+
   })
 export default class header extends Vue {
   app={
-    name:"飓风物流客户服务平台"
+    name:"投融资管理平台"
 };
-arrow:boolean=true;
+  arrow:boolean=true;
+
   mounted(){
    this.changeDedentIcon();
   }

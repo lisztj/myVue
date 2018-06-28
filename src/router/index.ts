@@ -3,15 +3,16 @@ import Router from 'vue-router'
 
 import hello from '../views/hello'
 import okay from '../views/okay'
-import demo from '../views/demo'
+
 import test from '../views/test'
 import other from '../views/other'
 
 import store from '../vuex/store'
 
-import login from '../views/login'
+// import login from '../views/login'
 import app from '../components/app'
 import HomeComponent from '../views/home'
+import FinancingProjectManage from '../views/financingProjectManage'
 import InquiryReleaseManageComponent from '../views/inquiryReleaseManage'
 import InquiryManageComponent from '../views/inquiryManage'
 import OrderReleaseManageComponent from '../views/orderReleaseManage'
@@ -22,21 +23,21 @@ import UserInfoComponent from '../views/userInfo'
 declare var $:any;
 Vue.use(Router)
 
-
  const router = new Router({
   routes: [
     {
       path: '/',
       redirect: {
-        name: 'login'
+        // name: 'login'
+        path: 'app/home'
     }
     },
-    {
-      path: '/login',
-      name:'login',
-      component: login,
-      meta:{title: 'login',requireAuth: false},
-    },
+    // {
+    //   path: '/login',
+    //   name:'login',
+    //   component: login,
+    //   meta:{title: 'login',requireAuth: false},
+    // },
     {
       path:'/app',
       component: app,
@@ -84,8 +85,8 @@ Vue.use(Router)
           component: hello,
         },
         {
-          path: 'okay',
-          component:okay,
+          path: 'FinancingProjectManage',///融资项目管理
+          component: FinancingProjectManage,
           children: [
             {
               path: '',
@@ -98,7 +99,7 @@ Vue.use(Router)
             {
               path: 'test',
               component: test
-            } 
+            }
           ],
         }
       ]
@@ -111,32 +112,34 @@ Vue.use(Router)
 router.beforeEach((to, from, next) => {
   let token = sessionStorage.getItem('token');
   store.state.token=token;
+          next();
         //判断是否需要登录权限 以及是否登录
-        if (!store.state.token && to.path !== '/login') {// 判断是否登录
-          next({
-              path: '/login',
-          });
-          $('body').addClass('body-bg')
-        // next()
-        } else {
-          next()
-        }
+        // if (!store.state.token && to.path !== '/login') {// 判断是否登录
+        //   next({
+        //       path: '/login',
+        //   });
+        //   $('body').addClass('body-bg')
+        // // next()
+        // } else {
+        //   next()
+        // }
+
           //路由钩子改标题
         if(to.meta.title){
           document.title = to.meta.title
         }
-        
+
 })
 
-router.afterEach((to,from)=>{
-  //登录页加背景图
-  if(to.path=="/login"){
-    // if(to.path=="/login"){
-    $('body').addClass('body-bg')
-  }else{
-    $('body').removeClass('body-bg')
-  }
-})
+// router.afterEach((to,from)=>{
+//   //登录页加背景图
+//   if(to.path=="/login"){
+//     // if(to.path=="/login"){
+//     $('body').addClass('body-bg')
+//   }else{
+//     $('body').removeClass('body-bg')
+//   }
+// })
 
 export default router
 
